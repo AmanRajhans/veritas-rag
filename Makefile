@@ -9,6 +9,7 @@ test:
 lint:
 	uv run ruff check .
 	uv run ruff format --check .
+	uv run mypy
 
 demo:
 	uv run veritas-rag index data/demo --output artifacts/demo-index.json

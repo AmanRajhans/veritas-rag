@@ -48,7 +48,11 @@ target-version = "py311"
 select = ["E", "F", "I", "B", "UP", "SIM"]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 strict = true
 packages = ["veritas_rag"]
 warn_unused_ignores = false
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true

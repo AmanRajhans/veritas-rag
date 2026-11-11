@@ -70,6 +70,7 @@ uv run veritas-rag evaluate data/eval/questions.jsonl \
 uv run pytest
 uv run ruff check .
 uv run ruff format --check .
+uv run mypy
 ```
 
 The included evaluation set is deliberately small and exists as an executable example, not a benchmark claim. Add real domain questions and calibrate the confidence threshold before production use.

@@ -71,7 +71,7 @@ class LocalSemanticIndex:
 
     def scores(self, query: str) -> np.ndarray:
         query_vector = normalize(self.vectorizer.transform([query]), norm="l2")
-        return (self.matrix @ query_vector.T).toarray().ravel()
+        return np.asarray((self.matrix @ query_vector.T).toarray(), dtype=np.float64).ravel()
 
 
 class CorpusIndex:

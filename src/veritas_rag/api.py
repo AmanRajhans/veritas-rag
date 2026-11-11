@@ -7,6 +7,7 @@ import time
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from pathlib import Path
+from typing import cast
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import PlainTextResponse
@@ -55,7 +56,7 @@ def create_app(pipeline: VeritasPipeline | None = None) -> FastAPI:
             counters["latency_ms"] += (time.perf_counter() - started) * 1_000
 
     def require_pipeline(request: Request) -> VeritasPipeline:
-        current = request.app.state.pipeline
+        current = cast(VeritasPipeline | None, request.app.state.pipeline)
         if current is None:
             raise HTTPException(status_code=503, detail="index not loaded")
         return current
