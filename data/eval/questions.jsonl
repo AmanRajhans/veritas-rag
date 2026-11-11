@@ -1,0 +1,6 @@
+{"query":"When is manager approval required for an expense?","relevant_sections":["Expense policy"],"reference_answer":"Manager approval is required before purchases from $100 to $500 and for airfare, lodging, and conference registration regardless of amount. Purchases above $500 also require department-head approval."}
+{"query":"What automatically triggers a deployment rollback?","relevant_sections":["Deployments"],"reference_answer":"The release rolls back when five-minute error rate exceeds 2% or p95 latency rises more than 30% over baseline."}
+{"query":"How quickly must a severity-one incident be acknowledged?","relevant_sections":["Incident response"],"reference_answer":"A severity-one page must be acknowledged within five minutes."}
+{"query":"How long does break-glass access last?","relevant_sections":["Access control"],"reference_answer":"Break-glass access expires after four hours and requires a retrospective review by the next business day."}
+{"query":"Can unused learning funds roll into next year?","relevant_sections":["Learning budget"],"reference_answer":"No. Unused learning funds expire on December 31 and do not roll over."}
+{"query":"How long are security audit logs retained?","relevant_sections":["Data retention"],"reference_answer":"Security audit logs are retained for one year."}
